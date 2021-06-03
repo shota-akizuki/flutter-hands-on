@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
 
 class SuzuriAPIRequest {
   @protected
@@ -16,5 +16,5 @@ class SuzuriAPIRequest {
 
   SuzuriAPIRequest({
     @required this.client,
-  }) : token = DotEnv().env["TOKEN"];
+  }) : token = DotEnv.env["TOKEN"];
 }
